@@ -51,7 +51,7 @@ keyPressed = e.keyCode;
 console.log(keyPressed);
 if(e.shiftKey == true && keyPressed == '80')
 {
-	console.log("p and shift pressed together");
+	console.log("p y shift presionadas al mismo tiempo");
 	block_image_width = block_image_width + 10;
 	block_image_height = block_image_height + 10;
 	document.getElementById("current_width").innerHTML = block_image_width;
@@ -59,7 +59,7 @@ if(e.shiftKey == true && keyPressed == '80')
 }
 if(e.shiftKey && keyPressed == '77')
 {
-	console.log("m and shift pressed together");
+	console.log("m y shift presionadas al mismo tiempo");
 	block_image_width = block_image_width - 10;
 	block_image_height = block_image_height - 10;
 	document.getElementById("current_width").innerHTML = block_image_width;
@@ -69,22 +69,22 @@ if(e.shiftKey && keyPressed == '77')
 	if(keyPressed == '38')
 	{
 		up();
-		console.log("up");
+		console.log("arriba");
 	}
 	if(keyPressed == '40')
 	{
 		down();
-		console.log("down");
+		console.log("abajo");
 	}
 	if(keyPressed == '37')
 	{
 		left();
-		console.log("left");
+		console.log("izquierda");
 	}
 	if(keyPressed == '39')
 	{
 		right();
-		console.log("right");
+		console.log("derecha");
 	}
 	if(keyPressed == '87')
 	{
@@ -138,8 +138,8 @@ function up()
 	if(player_y >=0)
 	{
 		player_y = player_y - block_image_height;
-		console.log("block image height = " + block_image_height);
-		console.log("When Up arrow key is pressed, X =  " + player_x + " , Y = "+player_y);
+		console.log("altura de la imagen de bloque = " + block_image_height);
+		console.log("Cuando se pulsa la tecla de flecha arriba, X =  " + player_x + " , Y = "+player_y);
 		canvas.remove(player_object);
 		player_update();
 	}
@@ -150,8 +150,8 @@ function down()
 	if(player_y <=500)
 	{
 		player_y = player_y + block_image_height;
-		console.log("block image height = " + block_image_height);
-		console.log("When Down arrow key is pressed, X =  " + player_x + " , Y = "+player_y);
+		console.log("altura de la imagen de bloque = " + block_image_height);
+		console.log("Cuando se pulsa la tecla de flecha abajo, X =  " + player_x + " , Y = "+player_y);
 		canvas.remove(player_object);
 		player_update();
 	}
@@ -162,8 +162,8 @@ function left()
 	if(player_x >0)
 	{
 		player_x = player_x - block_image_width;
-		console.log("block image width = " + block_image_width);
-		console.log("When Left arrow key is pressed, X =  " + player_x + " , Y = "+player_y);
+		console.log("ancho de la imagen de bloque = " + block_image_width);
+		console.log("Cuando se pulsa la tecla de flecha izquierda, X =  " + player_x + " , Y = "+player_y);
 		canvas.remove(player_object);
 		player_update();
 	}
@@ -174,8 +174,8 @@ function right()
 	if(player_x <=850)
 	{
 		player_x = player_x + block_image_width;
-		console.log("block image width = " + block_image_width);
-		console.log("When Right arrow key is pressed, X =  " + player_x + " , Y = "+player_y);
+		console.log("ancho de la imagen de bloque = " + block_image_width);
+		console.log("Cuando se pulsa la tecla de flecha derecha, X =  " + player_x + " , Y = "+player_y);
 		canvas.remove(player_object);
 		player_update();
 	}
